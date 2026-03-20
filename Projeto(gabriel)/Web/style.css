@@ -1,0 +1,202 @@
+/* main.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Títulos dos Bimestres */
+.first, .second, .third, .fourth {
+    background: white;
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.first:hover, .second:hover, .third:hover, .fourth:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.first { border-left: 5px solid #ff6b6b; }
+.second { border-left: 5px solid #4ecdc4; }
+.third { border-left: 5px solid #45b7d1; }
+.fourth { border-left: 5px solid #f9ca24; }
+
+.first h3, .second h3, .third h3, .fourth h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Inputs e Labels */
+.first p, .second p, .third p, .fourth p {
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #555;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background: white;
+    transform: scale(1.02);
+}
+
+/* Botões de Enviar */
+in {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Seção de Resultados */
+ol ul {
+    list-style: none;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 30px 0;
+}
+
+ol ul li {
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: 0 5px 15px rgba(240, 147, 251, 0.3);
+    transition: transform 0.3s ease;
+}
+
+ol ul li:hover {
+    transform: scale(1.02);
+}
+
+/* Botões principais */
+#mostra_nota, #mediana {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 40px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+#mediana {
+    background: linear-gradient(45deg, #f9ca24, #f0932b);
+    margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .first, .second, .third, .fourth {
+        margin: 15px 0;
+        padding: 20px;
+    }
+    
+    input[type="number"] {
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+    
+    ol ul {
+        padding: 20px;
+        margin: 20px 0;
+    }
+    
+    ol ul li {
+        padding: 15px;
+        font-size: 1em;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.first, .second, .third, .fourth, ol ul {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.first { animation-delay: 0.1s; }
+.second { animation-delay: 0.2s; }
+.third { animation-delay: 0.3s; }
+.fourth { animation-delay: 0.4s; }
+ol ul { animation-delay: 0.5s; }
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
